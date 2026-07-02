@@ -22,7 +22,7 @@ Machine learning models speak numbers, not text.
 ### 3. The Baseline Model (Random Forest)
 * The data is split into an 80/20 train-test ratio. 
 * A `RandomForestClassifier` is trained first as a baseline. 
-* **The Catch:** When we test it, the overall accuracy might look okay (around 65%), but looking closely at the `classification_report`, the model is heavily biased[cite: 1]. Because there are way more `0`s (no conversion) than `1`s (conversion), the model takes the easy way out and mostly predicts `0`. 
+* **The Catch:** When we test it, the overall accuracy might look okay (around 65%), but looking closely at the `classification_report`, the model is heavily biased. Because there are way more `0`s (no conversion) than `1`s (conversion), the model takes the easy way out and mostly predicts `0`. 
 
 ### 4. The Solution: XGBoost & Handling Class Imbalance
 To fix the bias, we bring in `XGBClassifier`. 
